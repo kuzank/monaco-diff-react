@@ -40,7 +40,9 @@ export class AdvancedTypescriptEditor extends React.Component {
                     <div style={{ width: '460px' }}></div>
                     <span className="title pointer" onClick={ () => this.setState({ dialogVisible: true }) }>
                         Monaco-Diff
-                        <i className="el-icon-setting" style={{ marginLeft: '10px'}}></i>
+                        
+                        <small style={{ marginLeft: '20px', fontSize: '14px'}}>编辑数据</small>
+                        <i className="el-icon-edit" style={{ fontSize: '14px'}}></i>
                     </span>
                     <div className="d-flex">
                         <div style={{ margin: '4px'}} >
@@ -76,7 +78,7 @@ export class AdvancedTypescriptEditor extends React.Component {
                 </div>
                 <Dialog
                     title="Monaco Diff Config"
-                    size="large"
+                    size="full"
                     visible={ this.state.dialogVisible }
                     onCancel={ () => this.setState({ dialogVisible: false }) }
                 >
@@ -88,7 +90,7 @@ export class AdvancedTypescriptEditor extends React.Component {
                                     value={ this.state.code_origin }
                                     type="textarea"
                                     onChange={ this.handleCodeOriginChange }
-                                    autosize={{ minRows: 20, maxRows: 30}}
+                                    autosize={{ minRows: 37}}
                                     placeholder="请输入原始数据"
                                 />
                             </div>
@@ -98,7 +100,7 @@ export class AdvancedTypescriptEditor extends React.Component {
                                     value={ this.state.code_modify }
                                     type="textarea"
                                     onChange={ this.handleCodeModifyChange }
-                                    autosize={{ minRows: 20, maxRows: 30}}
+                                    autosize={{ minRows: 37}}
                                     placeholder="请输入比对数据"
                                 />
                             </div>
