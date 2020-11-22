@@ -14,11 +14,6 @@ set -e
 
 cd "${ROOT_DIR}"
 
-npm cache verify
-npm cache clean
-npm cache clean --force
-npm i -g npm
-
 # 生成静态文件
 npm install
 npm run build
